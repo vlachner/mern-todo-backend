@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const todoRoutes = express.Router()
-const PORT = 443;
+const PORT = process.env.PORT;
 
 let Todo = require('./todo.model');
 
