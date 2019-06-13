@@ -11,7 +11,7 @@ let Todo = require('./todo.model');
 app.use(cors());
 app.use(bodyParser.json());
 
-const uri = "mongodb+srv://dbUser:Pernix123.@pernixsandbox-saoxf.azure.mongodb.net/merntodo";
+const uri = process.env.URI;
 mongoose.connect(uri, {useNewUrlParser: true});
 const connection = mongoose.connection;
 
